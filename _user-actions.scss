@@ -1,0 +1,9 @@
+@use "mixins" as *;
+
+* {
+  @include css3-prefix(user-select, none);
+}
+
+img {
+  @include css3-prefix(user-drag, none, false);
+}

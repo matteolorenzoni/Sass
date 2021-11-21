@@ -1,0 +1,346 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  height: 100vh;
+  width: 100vw;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Add Vendor Prefixes to Any CSS Property */
+/* @include css3-prefix(transform, scale3d(2.5, 2, 1.5)); */
+/* Fluid typography */
+/* Keyframe Animations */
+/* Vertical Centering */
+/* Flex center position */
+/* Scrollbar */
+/* Text Shortening */
+/* Hover lift */
+.btn {
+  transition: transform 0.35s ease-in-out;
+  box-shadow: 0em 0.25em 0.5em 0em rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0em 0em 1.25em 0em rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease-in-out;
+  opacity: 0;
+}
+.btn:hover, .btn:focus {
+  transform: scale(1.05);
+}
+.btn:hover::before, .btn:focus::before {
+  opacity: 1;
+}
+
+* {
+  -webkit-user-select: none;
+  -webkit-touch-user-select: none;
+  -khtml-user-select: none;
+  -ms--user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+img {
+  -webkit-user-drag: none;
+  -webkit-touch-user-drag: none;
+  -khtml-user-drag: none;
+  -ms--user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+  -o-user-drag: none;
+}
+
+/*
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 16px;
+$max_font: 24px;
+
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+ */
+:root {
+  --color-primary-100: #ffb199;
+  --color-primary-200: #ff8a66;
+  --color-primary-300: #ff6333;
+  --color-primary-400: #db2c00;
+  --color-primary-500: #661800;
+  --color-secondary-100: #9ff9f3;
+  --color-secondary-200: #6ff6ed;
+  --color-secondary-300: #3ff3e7;
+  --color-secondary-400: #0dcec1;
+  --color-secondary-500: #06605a;
+  --color-neutral-100: white;
+  --color-neutral-200: #dedede;
+  --color-neutral-300: #cccccc;
+  --color-neutral-700: #666666;
+  --color-neutral-800: #4d4d4d;
+  --color-neutral-900: #262626;
+}
+@media only screen and (min-width: 0px) {
+  :root {
+    --size-300: 1rem;
+    --size-400: 1rem;
+    --size-500: 1rem;
+    --size-600: 1rem;
+    --size-700: 1rem;
+    --size-800: 1rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  :root {
+    --size-300: 1rem;
+    --size-400: 1rem;
+    --size-500: 1rem;
+    --size-600: 1rem;
+    --size-700: 1rem;
+    --size-800: 1rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  :root {
+    --size-300: 1rem;
+    --size-400: 1rem;
+    --size-500: 1rem;
+    --size-600: 1rem;
+    --size-700: 1rem;
+    --size-800: 1rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  :root {
+    --size-300: 1rem;
+    --size-400: 1rem;
+    --size-500: 1rem;
+    --size-600: 1rem;
+    --size-700: 1rem;
+    --size-800: 1rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  :root {
+    --size-300: 1rem;
+    --size-400: 1rem;
+    --size-500: 1rem;
+    --size-600: 1rem;
+    --size-700: 1rem;
+    --size-800: 1rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  :root {
+    --size-300: 1rem;
+    --size-400: 1rem;
+    --size-500: 1rem;
+    --size-600: 1rem;
+    --size-700: 1rem;
+    --size-800: 1rem;
+  }
+}
+
+.text-primary-100 {
+  color: #ffb199;
+}
+
+.background-primary-100 {
+  color: #ffb199;
+}
+
+.text-primary-200 {
+  color: #ff8a66;
+}
+
+.background-primary-200 {
+  color: #ff8a66;
+}
+
+.text-primary-300 {
+  color: #ff6333;
+}
+
+.background-primary-300 {
+  color: #ff6333;
+}
+
+.text-primary-400 {
+  color: #db2c00;
+}
+
+.background-primary-400 {
+  color: #db2c00;
+}
+
+.text-primary-500 {
+  color: #661800;
+}
+
+.background-primary-500 {
+  color: #661800;
+}
+
+.text-secondary-100 {
+  color: #9ff9f3;
+}
+
+.background-secondary-100 {
+  color: #9ff9f3;
+}
+
+.text-secondary-200 {
+  color: #6ff6ed;
+}
+
+.background-secondary-200 {
+  color: #6ff6ed;
+}
+
+.text-secondary-300 {
+  color: #3ff3e7;
+}
+
+.background-secondary-300 {
+  color: #3ff3e7;
+}
+
+.text-secondary-400 {
+  color: #0dcec1;
+}
+
+.background-secondary-400 {
+  color: #0dcec1;
+}
+
+.text-secondary-500 {
+  color: #06605a;
+}
+
+.background-secondary-500 {
+  color: #06605a;
+}
+
+.text-neutral-100 {
+  color: white;
+}
+
+.background-neutral-100 {
+  color: white;
+}
+
+.text-neutral-200 {
+  color: #dedede;
+}
+
+.background-neutral-200 {
+  color: #dedede;
+}
+
+.text-neutral-300 {
+  color: #cccccc;
+}
+
+.background-neutral-300 {
+  color: #cccccc;
+}
+
+.text-neutral-700 {
+  color: #666666;
+}
+
+.background-neutral-700 {
+  color: #666666;
+}
+
+.text-neutral-800 {
+  color: #4d4d4d;
+}
+
+.background-neutral-800 {
+  color: #4d4d4d;
+}
+
+.text-neutral-900 {
+  color: #262626;
+}
+
+.background-neutral-900 {
+  color: #262626;
+}
+
+/*# sourceMappingURL=style.css.map */
